@@ -1,0 +1,174 @@
+{
+    "validation": {
+        "etapes": {
+            "vir_kelia_oeri": {
+                "type": "xml",
+                "application": {
+                    "cassini": "A2008",
+                    "nom": "FACADE METIER OERI"
+                },
+                "emetteur": {
+                    "cassini": "A1966",
+                    "nom": "KELIA"
+                },
+                "environnement": "recette util",
+                "processus": {
+                    "code": "Virement SEPA",
+                    "etape": {
+                        "id": "1",
+                        "nom": "vir_kelia_oeri",
+                        "statut":{
+                            "defaut":"OK",
+                            "indicateur": null
+                        }
+                    }
+                },
+                "champs": {
+                    "pathXML": ".//ns:CdtTrfTxInf",
+                    "keywords": {
+                        "keyword_01": "../ns:PmtInfId",
+                        "keyword_02": "./ns:PmtId/ns:EndToEndId",
+                        "keyword_03": "../ns:Dbtr/ns:Nm"
+                    },
+                    "nombres": {
+                        "nombre_01": "./ns:Amt/ns:InstdAmt",
+                        "nombre_02": "../ns:CtrlSum",
+                        "nombre_03": "../ns:NbOfTxs"
+                    },
+                    "dates": {
+                        "date_01": "../ns:ReqdExctnDt"
+                    },
+                    "trace_id": {
+                        "keywords":["keyword_01", "keyword_02"]
+                    }
+                }
+            },
+            "vir_neofi_banque": {
+                "type": "xml",
+                "application": {
+                    "cassini": "A2008",
+                    "nom": "FACADE METIER OERI"
+                },
+                "emetteur": {
+                    "cassini": "A1966",
+                    "nom": "KELIA"
+                },
+                "environnement": "recette util",
+                "processus": {
+                    "code": "Virement SEPA",
+                    "etape": {
+                        "id": "1",
+                        "nom": "vir_neofi_banque",
+                        "statut":{
+                            "defaut":"OK",
+                            "indicateur": null
+                        }
+                    }
+                },
+                "champs": {
+                    "pathXML": ".//ns:CdtTrfTxInf",
+                    "keywords": {
+                        "keyword_01": "../ns:PmtInfId",
+                        "keyword_02": "./ns:PmtId/ns:EndToEndId",
+                        "keyword_03": "../ns:Dbtr/ns:Nm"
+                    },
+                    "nombres": {
+                        "nombre_01": "./ns:Amt/ns:InstdAmt",
+                        "nombre_02": "../ns:CtrlSum",
+                        "nombre_03": "../ns:NbOfTxs"
+                    },
+                    "dates": {
+                        "date_01": "../ns:ReqdExctnDt"
+                    },
+                    "trace_id": {
+                        "keywords":["keyword_01", "keyword_02"]
+                    }
+                }
+            },
+            "vir_rejet_banque_neofi": {
+                "type": "xml",
+                "application": {
+                    "cassini": "A2008",
+                    "nom": "FACADE METIER OERI"
+                },
+                "emetteur": {
+                    "cassini": "A1966",
+                    "nom": "KELIA"
+                },
+                "environnement": "recette util",
+                "processus": {
+                    "code": "Virement SEPA",
+                    "etape": {
+                        "id": "1",
+                        "nom": "vir_neofi_banque",
+                        "statut":{
+                            "defaut":"KO",
+                            "indicateur": null
+                        }
+                    }
+                },
+                "champs": {
+                    "pathXML": ".//ns:Ntry",
+                    "keywords": {
+                        "keyword_01": "???",
+                        "keyword_02": "./ns:NtryDtls/ns:TxDtls/ns:Refs/ns:EndToEndId",
+                        "keyword_03": "../ns:Acct/ns:Nm"
+                    },
+                    "nombres": {
+                        "nombre_01": "./ns:Amt",
+                        "nombre_02": "../ns:TxsSummry/ns:TtlCdtNtries/ns:Sum",
+                        "nombre_03": "../ns:TxsSummry/ns:TtlCdtNtries/ns:NbOfNtries"
+                    },
+                    "dates": {
+                        "date_01": "../ns:CreDtTm"
+                    },
+                    "trace_id": {
+                        "keywords":["keyword_01", "keyword_02"]
+                    }
+                }
+            },
+            "vir_rejet_neofi_oeri": {
+                "type": "xml",
+                "application": {
+                    "cassini": "A2008",
+                    "nom": "FACADE METIER OERI"
+                },
+                "emetteur": {
+                    "cassini": "A1966",
+                    "nom": "KELIA"
+                },
+                "environnement": "recette util",
+                "processus": {
+                    "code": "Virement SEPA",
+                    "etape": {
+                        "id": "1",
+                        "nom": "vir_neofi_banque",
+                        "statut":{
+                            "defaut":"KO",
+                            "indicateur": null
+                        }
+                    }
+                },
+                "champs": {
+                    "pathXML": ".//ns:Ntry",
+                    "keywords": {
+                        "keyword_01": "???",
+                        "keyword_02": "./ns:NtryDtls/ns:TxDtls/ns:Refs/ns:EndToEndId",
+                        "keyword_03": "../ns:Acct/ns:Nm"
+                    },
+                    "nombres": {
+                        "nombre_01": "./ns:Amt",
+                        "nombre_02": "../ns:TxsSummry/ns:TtlCdtNtries/ns:Sum",
+                        "nombre_03": "../ns:TxsSummry/ns:TtlCdtNtries/ns:NbOfNtries"
+                    },
+                    "dates": {
+                        "date_01": "../ns:CreDtTm"
+                    },
+                    "trace_id": {
+                        "keywords":["keyword_01", "keyword_02"]
+                    }
+                }
+            }
+        }
+    }
+}

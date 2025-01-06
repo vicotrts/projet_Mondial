@@ -1,0 +1,130 @@
+{
+    "validation":{
+        "etapes": {            
+            "vl_neofi":{
+            "type":"csv",
+            "application":{
+                "cassini":"A1463",
+                "nom":"NEOFI EXCHANGE HUB"
+            },
+            "emetteur":{
+                "cassini":"A1463",
+                "nom":"Chorus Linedata"
+            },
+            "environnement":"recette util",
+            "processus":{
+                "code":"Valeurs Liquidatives",
+                "etape":{
+                    "id":"1",
+                    "nom":"vl_neofi",
+                    "statut":{
+                        "defaut":"OK",
+                        "indicateur": null
+                    }
+                }
+            },
+            "champs":{
+                "keywords":{
+                    "keyword_01": 0,
+                    "keyword_02": 5
+                },
+                "nombres":{
+                    "nombre_01": 2,
+                    "nombre_02": 3,
+                    "nombre_03": 4
+                },
+                "dates":{
+                    "date_01": 1
+                },
+                "trace_id":{
+                    "keywords":["keyword_01"],
+                    "dates":["date_01"]
+                }
+            }
+        },
+            "vl_oeri":{
+                "type":"csv",
+                "application":{
+                    "cassini":"A2008",
+                    "nom":"FACADE METIER OERI"
+                },
+                "emetteur":{
+                    "cassini":"A1463",
+                    "nom":"NEOFI EXCHANGE HUB"
+                },
+                "environnement":"recette util",
+                "processus":{
+                    "code":"Valeurs Liquidatives",
+                    "etape":{
+                        "id":"2",
+                        "nom":"vl_oeri",
+                        "statut":{
+                            "defaut":"OK",
+                            "indicateur": null
+                        }
+                    }
+                },
+                "champs":{
+                    "keywords":{
+                        "keyword_01": 0,
+                        "keyword_02": 5
+                    },
+                    "nombres":{
+                        "nombre_01": 2,
+                        "nombre_02": 3,
+                        "nombre_03": 4
+                    },
+                    "dates":{
+                        "date_01": 1
+                    },
+                    "trace_id":{
+                        "keywords":["keyword_01"],
+                        "dates":["date_01"]
+                    }
+                }
+            },
+            "vl_rejet":{
+                "type":"csv",
+                "application":{
+                    "cassini":"A2008",
+                    "nom":"FACADE METIER OERI"
+                },
+                "emetteur":{
+                    "cassini":"A1966",
+                    "nom":"KELIA"
+                },
+                "environnement":"recette util",
+                "processus":{
+                    "code":"Valeurs Liquidatives",
+                    "etape":{
+                        "id":"3",
+                        "nom":"vl_rejet",
+                        "statut":{
+                            "defaut":"OK",
+                            "indicateur": 5
+                        }
+                    }
+                },
+                "champs":{
+                    "keywords":{
+                        "keyword_01": 0,
+                        "keyword_03": 5,
+                        "keyword_04": 6
+                    },
+                    "nombres":{
+                        "nombre_01": 2,
+                        "nombre_02": 3,
+                        "nombre_03": 4
+                    },
+                    "dates":{
+                        "date_01": 1
+                    },
+                    "trace_id":{
+                        "keywords":["keyword_01"],
+                        "dates":["date_01"]
+                    }
+                }
+            }
+        }
+    }
+}
