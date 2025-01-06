@@ -18,7 +18,7 @@ Features :
 Paramètres :
     env = environnement d'origine du fichier
     process_name = nom du process observé
-    step = étape du process
+    step = étape du process grgrg
     file_name = optionnel, nom du fichier à traiter. En l'absence de ce paramètre tout les fichiers du dossier seront traité
 """
 import os
